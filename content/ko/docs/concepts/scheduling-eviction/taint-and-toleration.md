@@ -156,8 +156,7 @@ tolerations:
 * **전용 노드**: 특정 사용자들이 독점적으로 사용하도록
 노드 셋을 전용하려면, 해당 노드에 테인트를 추가(예:
 `kubectl taint nodes nodename dedicated=groupName:NoSchedule`)한 다음 해당
-톨러레이션을 그들의 파드에 추가할 수 있다(사용자 정의 [어드미션 컨트롤러]
-(/docs/reference/access-authn-authz/admission-controllers/)를 작성하면 가장 쉽게 수행할 수 있음).
+톨러레이션을 그들의 파드에 추가할 수 있다(사용자 정의 [어드미션 컨트롤러](/docs/reference/access-authn-authz/admission-controllers/)를 작성하면 가장 쉽게 수행할 수 있음).
 그런 다음 톨러레이션이 있는 파드는 테인트된(전용) 노드와
 클러스터의 다른 노드를 사용할 수 있다. 노드를 특정 사용자들에게 전용으로 지정하고 *그리고*
 그 사용자들이 전용 노드 *만* 사용하려면, 동일한 노드 셋에
